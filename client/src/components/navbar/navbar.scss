@@ -1,0 +1,177 @@
+.Navbar {
+  // border: 1px solid black;
+  display: flex;
+  height: 10vh;
+  // overflow: hidden;
+  background-color: transparent;
+  padding: 0 100px;
+  filter: blur(20);
+  background-color: red;
+
+  z-index: 999;
+  box-shadow: rgba(255, 0, 0, 0.555) 0px 3px 8px;
+  .logo {
+    width: 20%;
+    position: relative;
+    color: white;
+    // border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    // border: 1px solid black;
+
+    div{
+      position: absolute;
+      // top: 80px;
+      // left: 450px;
+      // border: 1px solid black;
+      height: 10vh;
+      width: 70%;
+      background-size: cover;
+      background-image: url("../../Resources/Logo2.png");
+      background-position: -50%;
+    }
+
+  }
+
+  .links {
+    width: 80%;
+    position: relative;
+    // border: 1px solid black;
+
+
+    .linksUl {
+      display: flex;
+      list-style: none;
+      height: 100%;
+      justify-content: flex-end;
+
+      .linksUlLi {
+        // border: 1px solid black;
+        width: 130px;
+        text-align: center;
+        position: relative;
+
+        &:before {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          width: 0;
+          height: 2px;
+          /* Adjust the height of the line as needed */
+          background-color: white;
+          /* Adjust the color of the line */
+          transition: width 0.3s ease-in-out;
+          transform: translateX(-50%);
+        }
+
+        &:hover {
+          font-weight: 600;
+
+          button {
+            font-weight: 600;
+          }
+
+          &:before {
+            width: 100%;
+          }
+
+          .dropDown {
+            opacity: 1;
+            transform: translateY(0px);
+            pointer-events: all;
+          }
+        }
+
+        .dropDown {
+          background-color: black;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 100%;
+          background-color: white;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          opacity: 0;
+          transition: all 0.2s ease;
+          transform: translateY(10px);
+          pointer-events: none;
+          z-index: 100;
+          .dropDownLi {
+            position: relative;
+            a {
+              color: black;
+              &:before{
+                content: "";
+                height: 100%;
+                width: 0;
+                background-color: red;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                transition: all .2s ease;
+              }
+              &:hover{
+                color: white;
+                &:before{
+                  width: 100%;
+                }
+              }
+            }
+            
+            button{
+              color: black;
+              height: 10vh;
+              position: relative;
+              background-color: transparent;
+              &:before{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 0%;
+                background-color: red;
+                z-index: -1;
+                transition: all 0.2s ease;
+              }
+              &:hover{
+                cursor: pointer;
+                color: white;
+                &:before{
+                  width: 100%;
+                }
+              }
+            }
+          
+          }
+        }
+
+        a {
+          display: block;
+          line-height: 10vh;
+          text-decoration: none;
+          color: white;
+          font-size: 16px;
+        }
+
+        button {
+          display: block;
+          width: 100%;
+          height: 100%;
+          cursor: pointer;
+          position: relative;
+          background-color: transparent;
+          border: none;
+          outline: none;
+          color: white;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+}

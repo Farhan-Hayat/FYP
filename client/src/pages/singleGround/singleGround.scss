@@ -1,0 +1,116 @@
+.SingleGround {
+  // background-color: black;
+  padding: 20px 100px 150px 100px;
+
+  .firstSection {
+    height: 60vh;
+    // border: 1px solid black;
+    display: flex;
+    background-color: #f0f2f5;
+    padding: 20px 50px;
+    .groundImagesCarousel {
+      // background-color: black;
+      width: 70%;
+      border: 1px solid black;
+    }
+
+    .groundFacilitiesDiv {
+      // background-color: black;
+      width: 30%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .groundFacilities {
+        // background-color: red;
+        background-color: #f0f2f5;
+        width: 80%;
+        // height: 90%;
+        // padding: 0px 5px 10px 5px ;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+
+        // gap: 10px;
+        h3 {
+          border-bottom: 1px solid gray;
+          padding: 10px;
+          text-align: center;
+          font-size: 30px;
+        }
+
+        p {
+          border-bottom: 1px solid gray;
+          padding: 10px;
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+
+  .secondSection {
+    padding: 20px 50px;
+
+    // border: 1px solid black;
+    background-color: #f0f2f5;
+    .groundDetail {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      h1 {
+        font-size: 50px;
+      }
+
+      h3 {
+        margin: 20px 0;
+        font-size: 30px;
+      }
+    }
+  }
+
+  .thirdSection {
+    background-color: #f0f2f5;
+    padding: 20px 50px;
+
+    .selectDateDiv {
+      display: flex;
+      gap: 20px;
+      padding: 20px 0;
+    }
+
+    // Your main SCSS file
+
+    .bookingTableDiv {
+      // border: 1px solid black;
+      table {
+        width: 50%;
+        border-collapse: collapse;
+        margin-top: 10px; // Adjust the margin as needed
+
+        th,
+        td {
+          border: 1px solid #ddd;
+          padding: 8px;
+          text-align: left;
+        }
+
+        th {
+          background-color: #f2f2f2;
+        }
+      }
+
+      button {
+        padding: 5px 10px;
+        cursor: pointer;
+
+        &:disabled {
+          opacity: 0.5;
+          cursor: not-allowed;
+        }
+      }
+    }
+
+  }
+}

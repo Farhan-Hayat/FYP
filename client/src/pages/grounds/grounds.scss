@@ -1,0 +1,77 @@
+.Grounds {
+  .headingCont {
+    background-image: url("../../Resources/grounds_background.png");
+    background-size: cover;
+    height: 150px;
+    background-position: 0 15%;
+
+    h1 {
+      color: white;
+      background-color: rgba(0, 0, 0, 0.63);
+      height: 100%;
+      text-align: center;
+      line-height: 150px;
+      font-size: 60px;
+    }
+  }
+
+  .cardsCont {
+    padding: 40px 100px 100px 100px;
+    // border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #f0f2f5;
+    
+    .searchBoxCont{
+      display: flex;
+      justify-content: center;
+      gap: 5px;
+      .searchBox{
+        padding: 10px 20px;
+        width: 60%;
+        border-radius: 20px;
+        outline: none;
+        border: 1px solid gray;
+        font-size: 18px;
+      }
+      button{
+        padding: 10px;
+        width: 10%;
+        color: white;
+        background-color: red;
+        border-radius: 20px;
+        outline: none;
+        font-size: 18px;
+        border: none;
+        cursor: pointer;
+      }
+    }
+    .card {
+      a {
+        // border: 1px solid black;
+        display: flex;
+        text-decoration: none;
+        color: black;
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        .cardImgCont{
+          width: 200px;
+          height: 200px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: cadetblue;
+        }
+        .cardDetailCont{
+          padding: 10px;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          justify-content: center;
+          font-size: 17px;
+        }
+      }
+    }
+  }
+}
