@@ -1,11 +1,11 @@
 import { Outlet } from "react-router-dom";
 import ManagerNavbar from "../../components/navbar/managerNavbar";
-
+import "./dashboard.scss"
 const Dashboard = () => {
   return (
-    <div>
+    <div className="ManagerDashboard">
       <ManagerNavbar />
-      <div>
+      <div className="ManagerOutlet">
         <Outlet />
       </div>
     </div>

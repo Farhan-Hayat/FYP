@@ -72,5 +72,5 @@ module.exports = {
   rehydrateUser,
   uploadProfilePicture,
   changePassword,
-  updateProfile
+  updateProfile,
 };

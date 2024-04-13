@@ -1,0 +1,12 @@
+.ManagerDashboard{
+  display: flex;
+  background-color: #f0f2f5;
+  .ManagerOutlet{
+    width: 80%;
+    height: 90vh;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    overflow-y: scroll;
+  }
+}

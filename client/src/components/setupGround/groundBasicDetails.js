@@ -8,7 +8,6 @@ const GroundBasicDetails = () => {
   const [groundSize, setGroundSize] = useState('');
   const [price, setPrice] = useState('');
 
-
   const handleGroundNameChange = (e) => setGroundName(e.target.value);
   const handleLocationChange = (e) => setLocation(e.target.value);
   const handleContactInformationChange = (e) => setContactInformation(e.target.value);

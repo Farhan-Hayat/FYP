@@ -1,13 +1,13 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const ManagerNavbar = () => {
   return ( 
-    <div>
-      <Link to="upload-post">Upload Post</Link>
-      <Link to="my-posts">My Posts</Link>
-      <Link to="setup-ground">Setup Ground</Link>
-      <Link to="add-time-slots">Add Time SLots</Link>
-      <Link to="bookingRequests">Booking Requests</Link>
+    <div className="ManagerNavbar">
+      <NavLink to="my-posts">My Posts</NavLink>
+      <NavLink to="upload-post">Upload Post</NavLink>
+      <NavLink to="setup-ground">Setup Ground</NavLink>
+      <NavLink to="add-time-slots">Add Time SLots</NavLink>
+      <NavLink to="bookingRequests">Booking Requests</NavLink>
     </div>
    );
 }
