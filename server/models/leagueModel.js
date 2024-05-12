@@ -50,6 +50,14 @@ leagueSchema.statics.getAllMatches = async function(leagueId){
   
 }
 
+leagueSchema.statics.getAllLeagues = async function(){
+  const leagues = await this.find()
+  if(leagues.length<1){
+    throw new Error ("No Leagues found")
+  }
+  return leagues;
+}
+
 const League = mongoose.model("League" , leagueSchema)
 
 module.exports = League

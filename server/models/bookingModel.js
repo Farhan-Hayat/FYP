@@ -93,8 +93,7 @@ bookingSchema.statics.updateBookingStatus = async function (body) {
 };
 
 bookingSchema.statics.getOneUserBookings = async function(userId){
-  
-  const userBookings = await this.find({user:userId})
+  const userBookings = await this.find({user:userId}).populate("user ground").exec()
   if(userBookings.length<1){
     throw new Error("No Bookings found for this user.")
   }

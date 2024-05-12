@@ -1,0 +1,74 @@
+.MyBookings{
+  .headingCont {
+    background-image: url("../../Resources/grounds_background.png");
+    background-size: cover;
+    height: 150px;
+    background-position: 0 15%;
+
+    h1 {
+      color: white;
+      background-color: rgba(0, 0, 0, 0.63);
+      height: 100%;
+      text-align: center;
+      line-height: 150px;
+      font-size: 60px;
+    }
+  }
+  .myBookingsDiv{
+    border-top:1px solid gray;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    background-color: white;
+    padding: 10px 0;
+    width: 80%;
+    margin: auto;
+    .requestCard{
+      // border:1px solid rgb(196, 194, 194);
+      display: flex;
+      width: 70%;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+      .requestUserImg{
+        width: 150px;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+          width: 100%;
+        }
+      }
+      .requestUserDetail{
+        border-left: 1px solid rgba(151, 150, 150, 0.486);
+        flex-grow: 2;
+        position: relative;
+        padding: 10px;
+        gap: 10px;
+        display: flex;
+        flex-direction: column;
+        .actionBtnHolder{
+          // border: 1px solid black;
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          padding: 10px;
+          display: flex;
+          gap:10px;
+          button{
+            width: 100px;
+            border: none;
+            outline: none;
+            padding: 10px;
+            color: white;
+            cursor:pointer;
+            &:hover{
+              opacity: 0.9;
+            }
+          }
+        }
+      }
+    }
+  }
+}

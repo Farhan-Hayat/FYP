@@ -27,6 +27,9 @@ const Navbar = () => {
             <Link to="/">Home</Link>
           </li>
           <li className="linksUlLi">
+            <Link to="leagues">Leagues</Link>
+          </li>
+          <li className="linksUlLi">
             <Link to="/grounds">Grounds</Link>
           </li>
           <li className="linksUlLi">
@@ -35,7 +38,7 @@ const Navbar = () => {
           <li className="linksUlLi">
             <Link to="/about/us">About Us</Link>
           </li>
-
+          
           <li className="linksUlLi">
             <Link>
               {isLoggedIn ? user?.name?.split(" ")[0] || "User" : "User"}
@@ -59,7 +62,7 @@ const Navbar = () => {
               )}
               {isLoggedIn && (
                 <li className="dropDownLi">
-                  <Link to="/my/profile">My Bookings</Link>{" "}
+                  <Link to="/my/bookings">My Bookings</Link>{" "}
                 </li>
               )}
               {isLoggedIn && (

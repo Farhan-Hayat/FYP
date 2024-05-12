@@ -31,6 +31,9 @@ import OwnerLeagueTable from "./pages/dashboard/manageLeague/ownerLeagueTable/ow
 import Matches from "./pages/dashboard/manageLeague/matches/matches";
 import ContactUs from "./pages/contactUs/contactUs";
 import AboutUs from "./pages/aboutUs/aboutUs";
+import Leagues from "./pages/leagues/leagues";
+import MyBookings from "./pages/myBookings/myBookings";
+
 function App() {
   const { authHelper } = useAuthHelper();
   useEffect(() => {
@@ -48,8 +51,11 @@ function App() {
             <Route path="player" element={<SignupPlayer />}></Route>
             <Route path="ground-owner" element={<SignupOwner />}></Route>
           </Route>
-          <Route path="my" element={<ProtectedRoute />}>
-            <Route path="profile" element={<UserProfile />}></Route>
+
+          <Route path="/leagues" element={<Leagues/>}></Route>
+          <Route path="my" element={<ProtectedRoute/>}>
+            <Route path="profile" element={<UserProfile/>}></Route>
+            <Route path="bookings" element={<MyBookings/>}></Route>
           </Route>
           <Route path="/admin" element={<AdminProtectedRoute />}>
             <Route path="dashboard" element={<AdminDashboard />}>
