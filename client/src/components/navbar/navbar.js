@@ -33,14 +33,16 @@ const Navbar = () => {
             <Link to="/grounds">Grounds</Link>
           </li>
           <li className="linksUlLi">
-            <Link to="">Contact Us</Link>
+            <Link to="/contact/us">Contact Us</Link>
           </li>
           <li className="linksUlLi">
-            <Link to="">About Us</Link>
+            <Link to="/about/us">About Us</Link>
           </li>
           
           <li className="linksUlLi">
-          <Link>{isLoggedIn ? user?.name?.split(" ")[0] || "User" : "User"}</Link>
+            <Link>
+              {isLoggedIn ? user?.name?.split(" ")[0] || "User" : "User"}
+            </Link>
 
             <ul className="dropDown">
               {isLoggedIn && user.role === "admin" && (
