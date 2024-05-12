@@ -1,0 +1,54 @@
+.ContactUs {
+  .headingCont {
+    background-image: url("../../Resources/grounds_background.png");
+    background-size: cover;
+    height: 150px;
+    background-position: 0 15%;
+
+    h1 {
+      color: white;
+      background-color: rgba(0, 0, 0, 0.63);
+      height: 100%;
+      text-align: center;
+      line-height: 150px;
+      font-size: 60px;
+    }
+  }
+}
+
+.contactUsDiv {
+  width: 60%;
+  // background: #a07b7b;
+  // border: 1px solid green;
+  margin: 20px auto;
+  padding: 20px 50px 50px 50px;
+  h3 {
+    text-align: center;
+    font-weight: 700;
+    padding: 20px;
+    font-size: 32px;
+    color: #2f3941;
+  }
+  .contactUsInfo {
+    margin-top: 18px;
+    padding: 20px 50px;
+    // border: 2px solid black;
+  }
+  .contactUsMoto {
+    color: #999b99;
+    font-size: 20px;
+  }
+}
+.contactUsMoreInfo {
+  margin-top: 15px;
+  p {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  ol {
+    padding: 10px 10px;
+  }
+  li {
+    padding: 10px 0;
+  }
+}
