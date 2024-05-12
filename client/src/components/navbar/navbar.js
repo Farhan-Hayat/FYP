@@ -57,6 +57,11 @@ const Navbar = () => {
               )}
               {isLoggedIn && (
                 <li className="dropDownLi">
+                  <Link to="/my/profile">My Bookings</Link>{" "}
+                </li>
+              )}
+              {isLoggedIn && (
+                <li className="dropDownLi">
                   <button onClick={logout}>Logout</button>{" "}
                 </li>
               )}

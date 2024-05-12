@@ -2,7 +2,7 @@ import React, { useState , useContext } from 'react';
 import useRegisterGround from '../../hooks/ground/registerGroudHook';
 import { UserContext } from '../../contexts/userContext';
 import { useNavigate } from 'react-router-dom';
-
+import "./groundBasicDetails.scss"
 const GroundFacilitiesDetails = ({groundBasics}) => {
   // State variables
   const [bleachers, setBleachers] = useState(false);
@@ -28,7 +28,8 @@ const GroundFacilitiesDetails = ({groundBasics}) => {
 
   const {registerGround} = useRegisterGround()
 
-  const handleSubmit = async ()=>{
+  const handleSubmit = async (e)=>{
+    e.preventDefault()
     const body= {...groundBasics,bleachers,capacity,lighting,waterCooler,parking,refreshmentArea,description , owner:user._id}
     console.log(body)
     const res = await registerGround(body)
@@ -39,8 +40,9 @@ const GroundFacilitiesDetails = ({groundBasics}) => {
   }
 
   return (
-    <div>
+    <div className='GroundFacilitiesDetails'>
       <h1>Ground Amenities and Description</h1>
+    <form>
 
       <label>
         Bleachers:
@@ -71,9 +73,11 @@ const GroundFacilitiesDetails = ({groundBasics}) => {
       <label>
         Description
         <input type="text" value={description} onChange={handleDescriptionChange} />
+        {/* <textarea name="" id="" cols="30" rows="10" ></textarea> */}
       </label>
 
       <button onClick={handleSubmit}>Submit</button>
+    </form>
     </div>
   );
 };

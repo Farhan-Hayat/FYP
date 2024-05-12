@@ -1,6 +1,6 @@
 import { useState } from "react";
 import GroundFacilitiesDetails from "./groundFacilitiesDetails";
-
+import "./groundBasicDetails.scss"
 const GroundBasicDetails = () => {
   const [groundName, setGroundName] = useState('');
   const [location, setLocation] = useState('');
@@ -15,9 +15,9 @@ const GroundBasicDetails = () => {
   const handlePricingChange = (e) => setPrice(e.target.value);
 
   return ( 
-    <div>
+    <div className="GroundBasicDetails">
       <h1>Ground Basic Details</h1>
-      <form>
+      <form className="firstForm">
       <label>
         Ground Name:
         <input type="text" value={groundName} onChange={handleGroundNameChange} />

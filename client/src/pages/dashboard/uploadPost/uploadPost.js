@@ -7,16 +7,21 @@ const UploadPost = () => {
   const { uploadPost } = useUploadPost();
   const { handleImageChange } = useImageChange();
   const [imageCode, setImageCode] = useState("");
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const body = {
       description: description ? description : "",
       imageCode: imageCode ? imageCode : "",
     };
     if (description || imageCode) {
-      const res = uploadPost(body);
+      const res = await uploadPost(body);
+      if(res.ok){
+        setDescription("")
+        setImageCode("")
+        alert("Your Post has been uploaded, please browse to 'My Post' to see your uploaded post.")
+      }
     } else {
-      console.log("Please Enter Some Data");
+      alert("Please Fill Any of One Field")
     }
   };
 

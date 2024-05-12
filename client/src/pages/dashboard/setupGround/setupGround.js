@@ -1,14 +1,16 @@
 import { useEffect, useState } from "react";
 import GroundBasicDetails from "../../../components/setupGround/groundBasicDetails";
 import useSearchGroundByOwnerId from "../../../hooks/ground/searchGroundByOwnerIdHook";
-
+import "./setupGround.scss"
 const SetupGround = () => {
   const { searchGroudByOwnerId } = useSearchGroundByOwnerId();
   const [groundExists, setGroundExists] = useState(false);
+  const [groundDeatils , setGroundDetails] = useState(null)
   const [loading, setLoading] = useState(true);
   const checkGroundExist = async () => {
     const res = await searchGroudByOwnerId();
     if (res.ok) {
+      setGroundDetails(res.data)
       setLoading(false);
       setGroundExists(true);
     } else {
@@ -22,12 +24,12 @@ const SetupGround = () => {
     // eslint-disable-next-line
   }, []);
   return (
-    <div>
+    <div className="SetupGround">
       {loading ? (
         <p>Loading ...</p>
       ) : groundExists ? (
         <div>
-          <p>You have already registered a ground</p>
+          <p>You have already registered a ground : {groundDeatils&&groundDeatils.groundName}</p>
         </div>
       ) : (
         <GroundBasicDetails />

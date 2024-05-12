@@ -8,6 +8,8 @@ const ManagerNavbar = () => {
       <NavLink to="setup-ground">Setup Ground</NavLink>
       <NavLink to="add-time-slots">Add Time SLots</NavLink>
       <NavLink to="bookingRequests">Booking Requests</NavLink>
+      <NavLink to="today-Bookings">Today Bookings</NavLink>
+      <NavLink to="manage-league">Manage League</NavLink>
     </div>
    );
 }

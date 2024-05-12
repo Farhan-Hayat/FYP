@@ -1,0 +1,51 @@
+.MyPosts{
+  // background-color:white;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  // justify-content: center;
+  flex-direction: column;
+  // overflow-y: scroll;
+  // padding-top: 200px;
+  h1{
+    border-bottom: 1px solid gray;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  .singlePost{
+    border: 1px solid gray;
+    width: 50%;
+    position: relative;
+    margin: 10px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    button{
+      position: absolute;
+      top: -15px;
+      right: -1px;
+      background-color: red;
+      color:white;
+      padding: 5px 14px;
+      outline: none;
+      border: none;
+      cursor: pointer;
+      &:hover{
+        background-color: rgb(255, 70, 70);
+      }
+    }
+    p{
+      border-bottom: 1px solid gray;
+      padding: 10px 0;
+      margin-top: 10px;
+      font-size: 16px;
+      word-wrap: break-word;
+    }
+    img{
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+.AddTimeSlots{
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  h1{
+    text-align: center;
+    margin: 10px 0;
+  }
+  form{
+    // border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .formDiv{
+      padding: 10px;
+      display: flex;
+      width: 30%;
+      gap: 10px;
+      // border: 1px solid black;
+      align-items: center;
+      label{
+        width: 30%;
+        font-weight: bold;
+      }
+      input[type="time"]{
+        width: 70%;
+        padding: 5px;
+      }
+      button{
+        margin: auto;
+        width: 200px;
+        padding: 10px;
+        font-size: 16px;
+        border: none;
+        outline: none;
+        font-weight: bold;
+        color: white;
+        background-color: red;
+        letter-spacing: 1px;
+        cursor: pointer;
+        &:hover{
+          background-color: rgba(255, 0, 0, 0.849);
+        }
+      }
+    }
+  }
+}

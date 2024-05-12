@@ -4,7 +4,9 @@ import "./dashboard.scss"
 const Dashboard = () => {
   return (
     <div className="ManagerDashboard">
-      <ManagerNavbar />
+        <ManagerNavbar />
+
+      
       <div className="ManagerOutlet">
         <Outlet />
       </div>

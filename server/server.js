@@ -6,6 +6,8 @@ const postRoutes = require("./routes/postRoutes");
 const groundRoutes = require("./routes/groundRoutes")
 const signupRequestRoutes = require("./routes/signupRequestRoutes")
 const bookingRoutes = require("./routes/bookingRoutes")
+const leagueRoutes = require("./routes/leagueRoutes")
+const teamRoutes = require("./routes/teamRoutes")
 // const myParser = require("body-parser");
 require("dotenv").config();
 const app = express();
@@ -25,3 +27,5 @@ app.use("/api/post", postRoutes);
 app.use("/api/ground" , groundRoutes)
 app.use("/api/signupRequest" ,signupRequestRoutes )
 app.use("/api/booking" , bookingRoutes)
+app.use("/api/league" , leagueRoutes)
+app.use("/api/team" , teamRoutes)

@@ -43,7 +43,7 @@ bookingSchema.statics.getOneGroundBookings = async function (id) {
   if (!mongoose.Types.ObjectId.isValid(id)) {
     throw new Error("Invalid Id");
   }
-  const bookings = await this.find({ ground: id });
+  const bookings = await this.find({ ground: id }).populate("user").exec();
   if (!bookings) {
     throw new Error("No bookings found");
   }
@@ -91,6 +91,15 @@ bookingSchema.statics.updateBookingStatus = async function (body) {
   }
   return updatedBooking;
 };
+
+bookingSchema.statics.getOneUserBookings = async function(userId){
+  
+  const userBookings = await this.find({user:userId})
+  if(userBookings.length<1){
+    throw new Error("No Bookings found for this user.")
+  }
+  return userBookings
+}
 
 const Booking = mongoose.model("Booking", bookingSchema);
 

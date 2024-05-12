@@ -50,10 +50,20 @@ async function searchByOwnerId(req,res){
   }
 }
 
+async function deleteTimeSlot(req,res){
+  try {
+    const data = await Ground.deleteTimeSlot(req.body)
+    res.status(200).json({data:data , ok:true , message:"Time Slot Deleted"})
+  } catch (error) {
+    res.status(400).json({error:error.message , ok:false})
+  }
+}
+
 module.exports = {
   registerGround,
   getAllGrounds,
   getSingleGround,
   postTimeSlot,
-  searchByOwnerId
+  searchByOwnerId,
+  deleteTimeSlot
 }

@@ -23,6 +23,12 @@ import SingleGround from "./pages/singleGround/singleGround";
 import AddTimeSlots from "./pages/dashboard/addTimeSlots/addTimeSlots";
 import BookingRequests from "./pages/dashboard/bookingRequests/bookingRequests";
 import "./App.scss"
+import TodayBookings from "./pages/dashboard/todayBookings/todayBookings";
+import ManageLeague from "./pages/dashboard/manageLeague/manageLeague";
+import AddLeague from "./pages/dashboard/manageLeague/addLeague/addLeague";
+import Teams from "./pages/dashboard/manageLeague/teams/teams";
+import OwnerLeagueTable from "./pages/dashboard/manageLeague/ownerLeagueTable/ownerLeagueTable";
+import Matches from "./pages/dashboard/manageLeague/matches/matches";
 function App() {
   const {authHelper} = useAuthHelper()
   useEffect(() => {
@@ -55,6 +61,13 @@ function App() {
               <Route path="my-posts" element={<MyPosts/>}></Route>
               <Route path="setup-ground" element={<SetupGround />}></Route>
               <Route path="bookingRequests" element={<BookingRequests/>}></Route>
+              <Route path="today-Bookings" element={<TodayBookings/>}></Route>
+              <Route path="manage-league" element={<ManageLeague/>} >
+                <Route path="add" element={<AddLeague/>}></Route>
+                <Route path="teams" element={<Teams/>} ></Route>
+                <Route path="league-table" element={<OwnerLeagueTable/>}></Route>
+                <Route path="matches" element={<Matches/>}></Route>
+              </Route>
             </Route>
           </Route>
           <Route path="/grounds" element={<Grounds/>}></Route>

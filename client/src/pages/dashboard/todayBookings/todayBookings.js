@@ -3,8 +3,7 @@ import useSearchGroundByOwnerId from "../../../hooks/ground/searchGroundByOwnerI
 import useGetOneGroundBookingRequests from "../../../hooks/booking/getOneGroundBookingRequests";
 import useUpdateBookingStatus from "../../../hooks/booking/updateBookingStatusHook";
 import "./bookingRequests.scss";
-
-const BookingRequests = () => {
+const TodayBookings = () => {
   const [refresh, setRefresh] = useState(false);
   const [requests, setRequests] = useState([]);
   const [currentDate, setCurrentDate] = useState("");
@@ -62,7 +61,7 @@ const BookingRequests = () => {
           requests
             .filter(
               (request) =>
-                request.date >= currentDate && request.status === "pending"
+                request.date === currentDate && request.status === "approved"
             )
             .map((request) => (
               <div key={request._id} className="requestCard">
@@ -91,24 +90,13 @@ const BookingRequests = () => {
                     <strong>Previous Number of Bookings:</strong>{" "}
                     {countPreviousBookings(request.user._id)}{" "}
                   </p>
-                  <div className="actionBtnHolder">
-                    <button className="blue"
-                      onClick={() => handleApprove(request._id, "approved")}
-                    >
-                      Approve
-                    </button>
-                    <button className="red"
-                      onClick={() => handleApprove(request._id, "declined")}
-                    >
-                      Decline
-                    </button>
-                  </div>
+                  
                 </div>
               </div>
             ))}
       </div>
     </div>
   );
-};
-
-export default BookingRequests;
+}
+ 
+export default TodayBookings;

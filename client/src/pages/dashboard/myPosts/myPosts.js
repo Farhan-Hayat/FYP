@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import useGetUserPosts from "../../../hooks/post/getUserPostsHook";
 import useDeleteUserPost from "../../../hooks/post/DeleteUserPostHook";
+import "./myPosts.scss"
 const MyPosts = () => {
   const [myPosts , setMyPosts]=useState([])
   const {getUserPosts} = useGetUserPosts()
@@ -8,7 +9,7 @@ const MyPosts = () => {
   const fetchPosts =async ()=>{
     const res = await getUserPosts()
     if(res.ok){
-      setMyPosts(res.data)
+      setMyPosts(res.data.reverse())
     }else{
       console.log("error")
     }
@@ -29,14 +30,18 @@ const MyPosts = () => {
   }, []);
   
   return ( 
-    <div>
+    <div className="MyPosts">
+      <h1>MY POSTS</h1>
       {myPosts.length>0 && myPosts.map(post=>(
-        <div key={post._id}>
+        <div key={post._id} className="singlePost">
+          <button onClick={()=>handleDelete(post._id)}>Delete</button>
           {post.description && <p>{post.description}</p>}
           {post.imageUrl && <img src={post.imageUrl} />}
-          <button onClick={()=>handleDelete(post._id)}>Delete</button>
         </div>
       )) }
+      {
+        myPosts.length<1 && <p>No posts to show</p>
+      }
     </div>
    );
 }

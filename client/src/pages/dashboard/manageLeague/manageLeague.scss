@@ -1,0 +1,223 @@
+.ManageLeague{
+  background-color: white;
+  width: 100%;
+  .manageLeagueNav{
+    margin-bottom: 10px;
+    height: 50px;
+    display: flex;
+    gap: 10px;
+    a{
+      text-decoration: none;
+      color: black;
+      display: flex;
+      align-items: center;
+      width: 100px;
+      justify-content: center;
+      border-bottom:1px solid gray;
+      &:hover{
+        background-color: rgba(173, 173, 173, 0.61);
+      }
+    }
+    .active{
+      border-bottom: 1px solid red;
+    }
+    
+  }
+  .manageLeagueOutlet{
+    // border:1px solid black;
+  }
+}
+
+.AddLeague{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h1{
+    text-align: center;
+    width: 80%;
+  }
+  .impNote{
+    width: 80%;
+    background-color: rgb(186, 2, 2);
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 20px;
+
+    p{
+      text-align: center;
+      color: white;
+    }
+  }
+  form{
+    margin-top: 20px;
+    // border: 1px solid black;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    .formDiv{
+    // border: 1px solid black;
+
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-top: 10px;
+      label{
+        font-weight: bold;
+      }
+      input{
+        padding: 5px;
+        font-size: 16px;
+        outline: none;
+        border: 1px solid gray;
+        // width: 250px;
+      }
+      input[type="text"]{
+        width: 350px;
+      }
+      button{
+        outline: none;
+        padding: 5px;
+        width: 200px;
+        font-size: 16px;
+        border: none;
+        background-color: red;
+        color: white;
+        letter-spacing: 1px;
+        margin: auto;
+        cursor: pointer;
+        &:hover{
+          background-color: rgba(255, 0, 0, 0.771);
+        }
+      }
+    }
+  }
+}
+
+.Teams{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h1{
+    text-align: center;
+    width: 80%;
+  }
+  form{
+    margin-top: 20px;
+    // border: 1px solid black;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    .formDiv{
+    // border: 1px solid black;
+
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-top: 10px;
+      label{
+        font-weight: bold;
+      }
+      input{
+        padding: 5px;
+        font-size: 16px;
+        outline: none;
+        border: 1px solid gray;
+        // width: 250px;
+      }
+      input[type="text"]{
+        width: 350px;
+      }
+      button{
+        outline: none;
+        padding: 5px;
+        width: 200px;
+        font-size: 16px;
+        border: none;
+        background-color: red;
+        color: white;
+        letter-spacing: 1px;
+        margin: auto;
+        cursor: pointer;
+        &:hover{
+          background-color: rgba(255, 0, 0, 0.771);
+        }
+      }
+    }
+  }
+}
+
+.OwnerLeagueTable{
+  h1{
+    text-align: center;
+  }
+  .leagueTable{
+    width: 70%;
+    margin: auto;
+    margin-top: 50px;
+  }
+}
+
+.Matches{
+  h1{
+    text-align: center;
+  }
+  form{
+    // border :1px solid black;
+    width: 60%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .formDiv{
+    display: flex;
+    align-items: center;
+    gap :20px;  
+    // border :1px solid black;
+    button{
+      background-color: red;
+      outline:none;
+      padding: 7px;
+      width: 200px;
+      color:white;
+      font-size: 15px;
+      border:none;
+      cursor: pointer;
+      &:hover{
+        background-color: rgba(255, 0, 0, 0.705);
+      }
+    }
+  }
+  input[type="number"]{
+    width: 48px;
+    padding: 8px;
+    font-size: 16px;
+
+  }
+  input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0; /* Optional: You can adjust the margin as needed */
+    display: none;
+}
+  select {
+    width: 200px; /* Adjust the width as needed */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none; /* Remove default outline */
+  }
+  
+  /* Style for disabled option */
+  option[disabled] {
+    color: #999; /* Change disabled option color */
+  }
+  
+  /* Style for selected option */
+  option:checked {
+    background-color: #e0e0e0; /* Change selected option background color */
+  }
+}
