@@ -30,8 +30,18 @@ async function getAllMatches(req,res){
   }
 }
 
+async function getAllLeagues(req,res){
+  try {
+    const data = await League.getAllLeagues()
+    res.status(200).json({data:data , ok:true , message:"All Leagues Fetched."})
+  } catch (error) {
+    res.status(400).json({error:error.message , ok:false})
+  }
+}
+
 module.exports = {
   addLeague,
   findLeagueByGroundId,
-  getAllMatches
+  getAllMatches,
+  getAllLeagues
 }

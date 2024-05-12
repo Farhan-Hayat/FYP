@@ -1,0 +1,18 @@
+.Leagues{
+  .headingCont {
+    background-image: url("../../Resources/grounds_background.png");
+    background-size: cover;
+    height: 150px;
+    background-position: 0 15%;
+
+    h1 {
+      color: white;
+      background-color: rgba(0, 0, 0, 0.63);
+      height: 100%;
+      text-align: center;
+      line-height: 150px;
+      font-size: 60px;
+    }
+  }
+
+}

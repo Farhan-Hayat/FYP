@@ -31,7 +31,7 @@ async function updateBookingStatus(req,res){
 
 async function getOneUserBookings(req,res){
   try {
-    const data = await Booking.getOneUserBookings(req.params.uesrId)
+    const data = await Booking.getOneUserBookings(req.params.userId)
     res.status(200).json({data:data , ok:true, message:"User Bookings Fetched."})
   } catch (error) {
     res.status(400).json({error:error.message , ok:false})    
