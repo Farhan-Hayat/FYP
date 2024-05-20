@@ -40,7 +40,6 @@ const AboutUs = () => {
                 individuals.
               </li>
             </ul>
-            <h3>Our Team</h3>
           </div>
         </div>
       </div>

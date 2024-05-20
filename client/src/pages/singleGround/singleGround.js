@@ -107,7 +107,7 @@ const SingleGround = () => {
 
       <section className="firstSection">
         <div className="groundImagesCarousel">
-          <h1>Ground Images Here</h1>
+          <img src="https://c.wallhere.com/photos/c0/f3/Football_football_stadium_footballers_soccer_Soccer_Field_soccer_pitches_Soccer_Spirits_nature-1805339.jpg!d" alt="" />
         </div>
         <div className="groundFacilitiesDiv">
           <div className="groundFacilities">

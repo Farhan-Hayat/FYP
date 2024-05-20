@@ -92,12 +92,12 @@ else{
           <button>Add Slot</button>
         </div>
       </form>
-      <div>
+      <div className="addTimeSlotTable">
         <table>
           <thead>
 
           <tr>
-            <th>######</th>
+            <th>#</th>
             <th>Start Time</th>
             <th>End Time</th>
             <th>Action</th>

@@ -88,8 +88,9 @@ const LeagueTable = ({ leagueId }) => {
     <div className="LeagueTable">
       <DataTable data={data} columns={columns} customStyles={customStyles} />
     </div>
+    <h1 style={{marginTop:"30px"}}>Matches</h1>
     <div style={customStyles.matchHistoryDiv}>
-      <h2>Matches</h2>
+      
       {matchesData.length>0 && matchesData.map(item=>(
         <div style={customStyles.oneMatchDiv}>
           
@@ -130,15 +131,16 @@ const customStyles = {
   },
   matchHistoryDiv:{
     display:"flex",
-    flexDirection:"column",
+    flexWrap:"wrap",
     alignItems:"center",
+    justifyContent:"center",
     gap:"10px",
-    marginTop:"30px"
+    
   },
   oneMatchDiv:{
     border:"1px solid gray",
     borderRadius:"20px",
-    width:"50%",
+    width:"40%",
     padding:"15px 30px 5px 30px",
     display:"flex",
     flexDirection:"column",

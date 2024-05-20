@@ -63,7 +63,7 @@ const Grounds = () => {
             <div key={ground._id} className="card">
               <Link to={`/ground/${ground._id}`}>
                 <div className="cardImgCont">
-                  <h3>Thumbnail Image</h3>
+                  <img src="https://c.wallhere.com/photos/c0/f3/Football_football_stadium_footballers_soccer_Soccer_Field_soccer_pitches_Soccer_Spirits_nature-1805339.jpg!d" alt="" />
                 </div>
                 <div className="cardDetailCont">
                   <p><strong>Name:</strong> {ground.groundName}</p>

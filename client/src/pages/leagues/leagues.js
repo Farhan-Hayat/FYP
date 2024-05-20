@@ -22,16 +22,23 @@ const Leagues = () => {
     fetchLeagues()
   }, []);
 
+
+
   return ( 
     <div className="Leagues">
       <div className="headingCont">
         <h1>Leagues</h1>
       </div>
+      <div className="content">
+
+      
       <aside className="leaguesNames">
+        <h2 style={{textAlign:'center' , margin:"10px"}} >Browse Leagues</h2>
         {
           leagues.length>0 && leagues.map(league=>(
-            <div onClick={()=>{setLeagueId(league._id);setLeagueHeading(league.name)}}>
+            <div className="leagueNameDiv" onClick={()=>{setLeagueId(league._id);setLeagueHeading(league.name)}}>
               <p>{league.name}</p>
+              <hr />
             </div>
           ))
         }
@@ -39,6 +46,7 @@ const Leagues = () => {
       <div className="tableHere">
         <h1>{leagueHeading}</h1>
         <LeagueTable leagueId={leagueId} />
+      </div>
       </div>
     </div>
    );

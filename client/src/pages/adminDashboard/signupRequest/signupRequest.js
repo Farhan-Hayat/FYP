@@ -11,6 +11,7 @@ const SignupRequest = () => {
     const res = await getSignupRequest()
     if(res.ok){
       setRequests(res.data)
+      console.log(res.data)
     }else{
       console.log(res)
     }
@@ -40,14 +41,22 @@ const SignupRequest = () => {
     handleGetRequests()
   }, []);
   return ( 
-    <div>
+    <div className="signupRequest">
       {requests.length < 1 && <div><p>NO request to show</p></div>}
       {requests.length > 0 && requests.map(request=>(
-        <div key={request._id}>
-          <p>{request.name}</p>
-          <p>{request.username}</p>
-          <button onClick={()=>handleAccept(request)}>Accept</button>
+        <div key={request._id} className="reqCard">
+          <p> <b>Name : </b> {request.name}</p>
+          <p> <b>Username:</b> {request.username}</p>
+          <p> <b>Phone Number:</b> {request.phoneNumber} </p>
+          <p> <b>Date Requested:</b> {request.createdAt.split("T")[0]} </p>
+          <div className="buttonHolder">
+
+          <button onClick={()=>handleAccept(request)}>ACCEPT</button>
           <button onClick={()=>handleDecline(request._id)}>DECLINE</button>
+          </div>
+          <div className="imgHolder">
+            <img src={request.document} alt="" />
+          </div>
         </div>
       ))}
     </div>

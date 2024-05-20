@@ -53,7 +53,7 @@ const TodayBookings = () => {
       <button onClick={handleRefresh} className="refreshBtn">
         🔃 Refresh
       </button>
-      <h1>Booking Requests</h1>
+      <h1>Todays Booking</h1>
       <div className="requestsHolder">
         {(!requests || requests.length === 0) && <div>No Requests to show</div>}
 

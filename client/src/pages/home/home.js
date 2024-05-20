@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link , useNavigate} from "react-router-dom";
 import useGetAllPosts from "../../hooks/post/getAllPostsHook";
 import "./home.scss";
 const Home = () => {
+  const navigate = useNavigate()
   //variables
   const [posts, setPosts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -46,12 +47,11 @@ const Home = () => {
           </div>
           <div className="postsContainer">
           <div className="leftSideCont">
-            <button>Home</button>
-            <button>Grounds</button>
-            <button>User Profile</button>
-            <button>Signup</button>
-            <button>Contact Us</button>
-            <button>About Us</button>
+            <button onClick={()=>navigate("/")}>Home</button>
+            <button onClick={()=>navigate("/grounds")} >Grounds</button>
+            <button onClick={()=>navigate("/my/profile")}>User Profile</button>
+            <button onClick={()=>navigate("/contact/us")} >Contact Us</button>
+            <button onClick={()=>navigate("/about/us")}>About Us</button>
             <br />
             <hr />
           </div>

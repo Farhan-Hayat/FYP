@@ -21,17 +21,17 @@ const ContactUs = () => {
             <p>You can:</p>
             <ol>
               <li>
-                Send us an email: help@olx.com.pk (09:00 am till 09:00 pm only){" "}
+                Send us an email: help@pitchhub.com.pk (09:00 am till 09:00 pm only){" "}
               </li>
               <li>Live chat (09:00 am till 09:00 pm only) </li>
               <li> Submit a support request by filling this form</li>
               <li> Call us: 0800-10101 (9:00 am till 09:00 pm only)</li>
               <li>
-                Visit our Facebook page: /OLXPakistan (09:00 am till 09:00 pm
+                Visit our Facebook page: /PitchHubPakistan (09:00 am till 09:00 pm
                 only){" "}
               </li>
               <li>
-                Reach us on Insta/Twitter: @OLX_Pakistan (09:00 am till 09:00 pm
+                Reach us on Insta/Twitter: @PitchHub_Pakistan (09:00 am till 09:00 pm
                 only){" "}
               </li>
             </ol>

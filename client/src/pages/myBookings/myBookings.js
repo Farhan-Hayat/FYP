@@ -14,8 +14,8 @@ const MyBookings = () => {
           const response = await axios.get(
             "http://localhost:3001/api/booking/user/" + user._id
           );
-          // console.log(response.data)
-          setBookingsData(response.data.data)
+          console.log(response.data)
+          setBookingsData(response.data.data.reverse())
         } catch (error) {
           console.log(error.response.data);
         }
@@ -30,7 +30,7 @@ const MyBookings = () => {
         <h1>My Bookings</h1>
       </div>
       <div className="myBookingsDiv">
-        {bookingsData.length>1 &&
+        {bookingsData.length>0 &&
           bookingsData.map((request) =>(
             <div key={request._id} className="requestCard">
                 <div className="requestUserImg">
@@ -53,6 +53,9 @@ const MyBookings = () => {
                   </p>
                   <p>
                     <strong>Location:</strong> {request.ground.location}
+                  </p>
+                  <p>
+                    <strong>Status:</strong> {request.status}
                   </p>
                 </div>
               </div>
